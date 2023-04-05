@@ -1,7 +1,75 @@
+
 $BG: #f1d145;
 $BASE: white;
 $ACCENT: black;
 
 body {
-    background-color: $BG
+    background-color: $BG;
+    margin: 0;
+}
+
+.outline {
+    background-color: $BASE;
+    border: 0.2rem solid $ACCENT;
+}
+
+.standard-link {
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+
+    #head-logo {
+        width: 1.5rem;
+        margin: 0 1.5rem 0 0;
+    }
+
+    #head-title {
+        font-weight: bold;
+        margin: 0 2rem 0 0;
+        font-size: 1.7rem;
+    }
+    nav * {
+        margin-right: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    background-color: $BG;
+    border-top: 0;
+    border-bottom: 0;
+
+    .main {
+        display: grid;
+        padding: 1rem;
+        max-width: 40rem;
+        height: 100rem;
+        border-top: 0;
+        border-bottom: 0;
+    }
+}
+
+.foot {
+    display: flex;
+    position: relative;
+    bottom: 0;
+    padding: 0.5rem;
+    justify-content: space-between;
+
+    div {
+        margin: 0 0.5rem;
+        * {
+            margin-right: 1rem;
+        }
+    }
 }
