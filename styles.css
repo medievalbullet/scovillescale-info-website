@@ -42,7 +42,7 @@ body {
 .main-container .main {
   display: grid;
   max-width: 40rem;
-  height: 100rem;
+  height: auto;
   border-top: 0;
   border-bottom: 0;
   grid-template: 4rem 1fr 20rem/1fr 1fr;
@@ -64,6 +64,19 @@ body {
 }
 .main-container .main #grid-text {
   grid-area: "text";
+  padding: 0;
+  border-right: solid 3px black;
+}
+.main-container .main #grid-text * {
+  padding: 1rem;
+}
+.main-container .main #grid-text h3 {
+  margin: 0;
+}
+.main-container .main #grid-text p {
+  margin: 0;
+  padding-top: 0rem;
+  border-bottom: solid 3px black;
 }
 .main-container .main #grid-scale {
   grid-area: "scale";
