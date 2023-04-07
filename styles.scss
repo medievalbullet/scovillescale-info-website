@@ -51,12 +51,46 @@ body {
 
     .main {
         display: grid;
-        padding: 1rem;
         max-width: 40rem;
         height: 100rem;
         border-top: 0;
         border-bottom: 0;
+        grid-template: 4rem 1fr 20rem / 1fr 1fr;
+        grid-template-areas: 
+            "title title"
+            "text scale"
+            "foot foot";
+        
+        * {
+            padding: 1rem;
+        }
+        
+        #grid-title {
+            display: flex;
+            grid-area: "title";
+            grid-column: span 2;
+            justify-content: center;
+            align-items: center;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            margin: 0;
+            
+        }
+        #grid-text {
+            grid-area: "text";
+        }
+        #grid-scale {
+            grid-area: "scale";
+        }
+        #grid-foot {
+            grid-area: "foot";
+            grid-column: span 2;
+            background-color: $ACCENT;
+            color: $BASE;
+        }
     }
+    
 }
 
 .foot {
