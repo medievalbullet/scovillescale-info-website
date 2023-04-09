@@ -25,6 +25,7 @@ body {
     display: flex;
     align-items: center;
     padding: 1rem 1.5rem;
+    user-select: none;
 
     #head-logo {
         width: 1.5rem;
@@ -94,9 +95,20 @@ body {
                 padding-top: 0rem;
                 border-bottom: solid 3px black;
             }
+            p:last-child {
+                border-bottom: 0;
+            }
         }
         #grid-scale {
             grid-area: "scale";
+            padding: 0;
+
+            section {
+                background-color: $ACCENT;
+                color: $BASE;
+                height: 20rem;
+                margin-bottom: 4rem;
+            }
         }
         #grid-foot {
             grid-area: "foot";

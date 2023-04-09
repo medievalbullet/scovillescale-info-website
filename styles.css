@@ -17,6 +17,9 @@ body {
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .head #head-logo {
   width: 1.5rem;
@@ -78,8 +81,18 @@ body {
   padding-top: 0rem;
   border-bottom: solid 3px black;
 }
+.main-container .main #grid-text p:last-child {
+  border-bottom: 0;
+}
 .main-container .main #grid-scale {
   grid-area: "scale";
+  padding: 0;
+}
+.main-container .main #grid-scale section {
+  background-color: black;
+  color: white;
+  height: 20rem;
+  margin-bottom: 4rem;
 }
 .main-container .main #grid-foot {
   grid-area: "foot";
