@@ -1,7 +1,18 @@
 
 $BG: #f1d145;
 $BASE: white;
-$ACCENT: black;
+$HIGHLIGHT: black;
+
+$ACCENTS: (
+    "1": #03ff00,
+    "2": #89ff00,
+    "3": #d6ff00,
+    "4": #ffe600,
+    "5": #ff8600,
+    "6": #ff4d00,
+    "7": #ff0a00,
+);
+
 
 body {
     background-color: $BG;
@@ -10,7 +21,7 @@ body {
 
 .outline {
     background-color: $BASE;
-    border: 0.2rem solid $ACCENT;
+    border: 0.2rem solid $HIGHLIGHT;
 }
 
 .standard-link {
@@ -41,6 +52,10 @@ body {
         margin-right: 1.5rem;
         font-weight: bold;
     }
+}
+
+@mixin align-scale-content {
+    align-self: center;
 }
 
 .main-container {
@@ -104,16 +119,97 @@ body {
             padding: 0;
 
             section {
-                background-color: $ACCENT;
+                display: flex;
+                flex-direction: column;
+                background-color: $HIGHLIGHT;
                 color: $BASE;
                 height: 20rem;
                 margin-bottom: 4rem;
+                justify-content: space-evenly;
+
+                div {
+
+                    h3 {
+                        padding: 0;
+                        margin: 0rem 0 0.2rem 0;
+                    }
+                    p {
+                        padding: 0;
+                        margin: 0 0 0rem 0;
+                        font-size: smaller;
+                        color: rgba($color: $BASE, $alpha: 0.5);
+                    }
+                }
+            }
+
+            @for $i from 1 through 7 {
+                section:nth-child(#{$i}) {
+                    display: grid;
+                    grid-template: 1fr 1fr / 1fr 8rem 0rem;
+                    grid-template-areas: 
+                        "scale-title1 scale-img1 scale-bar"
+                        "scale-title2 scale-img2 scale-bar"
+                        ;
+                    //border-right: 10px solid map-get($ACCENTS, #{$i});
+                    //align-items: center;
+
+                    * {
+                        //display: flex;
+                        //border: 0.1rem solid $BASE;
+                        padding: 0;
+                        //align-items: center;
+
+                    }
+
+
+
+                    .scale-title1 {
+                        grid-area: "scale-title1";
+                        @include align-scale-content
+                        
+                    }
+                    .scale-img1 {
+                        grid-area: "scale-img1";
+                        width: 3rem;
+                        justify-self: center;
+                        @include align-scale-content
+                    }
+                    .scale-title2 {
+                        grid-area: "scale-title2";
+                        grid-row-start: 2;
+                        @include align-scale-content
+                    }
+                    .scale-img2 {
+                        grid-area: "scale-img2";
+                        grid-row-start: 2;
+                        width: 3rem;
+                        justify-self: center;
+                        @include align-scale-content
+                    }
+                    .scale-bar {
+                        display: flex;
+                        grid-area: "scale-bar";
+                        grid-row: 2 span;
+                        grid-column-start: 3;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 1rem;
+
+                        div {
+                            background-color: map-get($ACCENTS, #{$i});
+                            width: 1rem;
+                            overflow: auto;
+                            height: 100%;
+                            border-left: 0.5rem solid map-get($ACCENTS, #{$i} );
+                        }
+                    }
+                }
             }
         }
         #grid-foot {
             grid-area: "foot";
             grid-column: span 2;
-            background-color: $ACCENT;
+            background-color: $HIGHLIGHT;
             color: $BASE;
         }
     }

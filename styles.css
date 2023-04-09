@@ -89,10 +89,345 @@ body {
   padding: 0;
 }
 .main-container .main #grid-scale section {
+  display: flex;
+  flex-direction: column;
   background-color: black;
   color: white;
   height: 20rem;
   margin-bottom: 4rem;
+  justify-content: space-evenly;
+}
+.main-container .main #grid-scale section div h3 {
+  padding: 0;
+  margin: 0rem 0 0.2rem 0;
+}
+.main-container .main #grid-scale section div p {
+  padding: 0;
+  margin: 0 0 0rem 0;
+  font-size: smaller;
+  color: rgba(255, 255, 255, 0.5);
+}
+.main-container .main #grid-scale section:nth-child(1) {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 8rem 0rem;
+  grid-template-areas: "scale-title1 scale-img1 scale-bar" "scale-title2 scale-img2 scale-bar";
+}
+.main-container .main #grid-scale section:nth-child(1) * {
+  padding: 0;
+}
+.main-container .main #grid-scale section:nth-child(1) .scale-title1 {
+  grid-area: "scale-title1";
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(1) .scale-img1 {
+  grid-area: "scale-img1";
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(1) .scale-title2 {
+  grid-area: "scale-title2";
+  grid-row-start: 2;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(1) .scale-img2 {
+  grid-area: "scale-img2";
+  grid-row-start: 2;
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(1) .scale-bar {
+  display: flex;
+  grid-area: "scale-bar";
+  grid-row: 2 span;
+  grid-column-start: 3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.main-container .main #grid-scale section:nth-child(1) .scale-bar div {
+  background-color: #03ff00;
+  width: 1rem;
+  overflow: auto;
+  height: 100%;
+  border-left: 0.5rem solid #03ff00;
+}
+.main-container .main #grid-scale section:nth-child(2) {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 8rem 0rem;
+  grid-template-areas: "scale-title1 scale-img1 scale-bar" "scale-title2 scale-img2 scale-bar";
+}
+.main-container .main #grid-scale section:nth-child(2) * {
+  padding: 0;
+}
+.main-container .main #grid-scale section:nth-child(2) .scale-title1 {
+  grid-area: "scale-title1";
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(2) .scale-img1 {
+  grid-area: "scale-img1";
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(2) .scale-title2 {
+  grid-area: "scale-title2";
+  grid-row-start: 2;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(2) .scale-img2 {
+  grid-area: "scale-img2";
+  grid-row-start: 2;
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(2) .scale-bar {
+  display: flex;
+  grid-area: "scale-bar";
+  grid-row: 2 span;
+  grid-column-start: 3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.main-container .main #grid-scale section:nth-child(2) .scale-bar div {
+  background-color: #89ff00;
+  width: 1rem;
+  overflow: auto;
+  height: 100%;
+  border-left: 0.5rem solid #89ff00;
+}
+.main-container .main #grid-scale section:nth-child(3) {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 8rem 0rem;
+  grid-template-areas: "scale-title1 scale-img1 scale-bar" "scale-title2 scale-img2 scale-bar";
+}
+.main-container .main #grid-scale section:nth-child(3) * {
+  padding: 0;
+}
+.main-container .main #grid-scale section:nth-child(3) .scale-title1 {
+  grid-area: "scale-title1";
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(3) .scale-img1 {
+  grid-area: "scale-img1";
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(3) .scale-title2 {
+  grid-area: "scale-title2";
+  grid-row-start: 2;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(3) .scale-img2 {
+  grid-area: "scale-img2";
+  grid-row-start: 2;
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(3) .scale-bar {
+  display: flex;
+  grid-area: "scale-bar";
+  grid-row: 2 span;
+  grid-column-start: 3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.main-container .main #grid-scale section:nth-child(3) .scale-bar div {
+  background-color: #d6ff00;
+  width: 1rem;
+  overflow: auto;
+  height: 100%;
+  border-left: 0.5rem solid #d6ff00;
+}
+.main-container .main #grid-scale section:nth-child(4) {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 8rem 0rem;
+  grid-template-areas: "scale-title1 scale-img1 scale-bar" "scale-title2 scale-img2 scale-bar";
+}
+.main-container .main #grid-scale section:nth-child(4) * {
+  padding: 0;
+}
+.main-container .main #grid-scale section:nth-child(4) .scale-title1 {
+  grid-area: "scale-title1";
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(4) .scale-img1 {
+  grid-area: "scale-img1";
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(4) .scale-title2 {
+  grid-area: "scale-title2";
+  grid-row-start: 2;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(4) .scale-img2 {
+  grid-area: "scale-img2";
+  grid-row-start: 2;
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(4) .scale-bar {
+  display: flex;
+  grid-area: "scale-bar";
+  grid-row: 2 span;
+  grid-column-start: 3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.main-container .main #grid-scale section:nth-child(4) .scale-bar div {
+  background-color: #ffe600;
+  width: 1rem;
+  overflow: auto;
+  height: 100%;
+  border-left: 0.5rem solid #ffe600;
+}
+.main-container .main #grid-scale section:nth-child(5) {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 8rem 0rem;
+  grid-template-areas: "scale-title1 scale-img1 scale-bar" "scale-title2 scale-img2 scale-bar";
+}
+.main-container .main #grid-scale section:nth-child(5) * {
+  padding: 0;
+}
+.main-container .main #grid-scale section:nth-child(5) .scale-title1 {
+  grid-area: "scale-title1";
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(5) .scale-img1 {
+  grid-area: "scale-img1";
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(5) .scale-title2 {
+  grid-area: "scale-title2";
+  grid-row-start: 2;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(5) .scale-img2 {
+  grid-area: "scale-img2";
+  grid-row-start: 2;
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(5) .scale-bar {
+  display: flex;
+  grid-area: "scale-bar";
+  grid-row: 2 span;
+  grid-column-start: 3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.main-container .main #grid-scale section:nth-child(5) .scale-bar div {
+  background-color: #ff8600;
+  width: 1rem;
+  overflow: auto;
+  height: 100%;
+  border-left: 0.5rem solid #ff8600;
+}
+.main-container .main #grid-scale section:nth-child(6) {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 8rem 0rem;
+  grid-template-areas: "scale-title1 scale-img1 scale-bar" "scale-title2 scale-img2 scale-bar";
+}
+.main-container .main #grid-scale section:nth-child(6) * {
+  padding: 0;
+}
+.main-container .main #grid-scale section:nth-child(6) .scale-title1 {
+  grid-area: "scale-title1";
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(6) .scale-img1 {
+  grid-area: "scale-img1";
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(6) .scale-title2 {
+  grid-area: "scale-title2";
+  grid-row-start: 2;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(6) .scale-img2 {
+  grid-area: "scale-img2";
+  grid-row-start: 2;
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(6) .scale-bar {
+  display: flex;
+  grid-area: "scale-bar";
+  grid-row: 2 span;
+  grid-column-start: 3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.main-container .main #grid-scale section:nth-child(6) .scale-bar div {
+  background-color: #ff4d00;
+  width: 1rem;
+  overflow: auto;
+  height: 100%;
+  border-left: 0.5rem solid #ff4d00;
+}
+.main-container .main #grid-scale section:nth-child(7) {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 8rem 0rem;
+  grid-template-areas: "scale-title1 scale-img1 scale-bar" "scale-title2 scale-img2 scale-bar";
+}
+.main-container .main #grid-scale section:nth-child(7) * {
+  padding: 0;
+}
+.main-container .main #grid-scale section:nth-child(7) .scale-title1 {
+  grid-area: "scale-title1";
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(7) .scale-img1 {
+  grid-area: "scale-img1";
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(7) .scale-title2 {
+  grid-area: "scale-title2";
+  grid-row-start: 2;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(7) .scale-img2 {
+  grid-area: "scale-img2";
+  grid-row-start: 2;
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.main-container .main #grid-scale section:nth-child(7) .scale-bar {
+  display: flex;
+  grid-area: "scale-bar";
+  grid-row: 2 span;
+  grid-column-start: 3;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+.main-container .main #grid-scale section:nth-child(7) .scale-bar div {
+  background-color: #ff0a00;
+  width: 1rem;
+  overflow: auto;
+  height: 100%;
+  border-left: 0.5rem solid #ff0a00;
 }
 .main-container .main #grid-foot {
   grid-area: "foot";
