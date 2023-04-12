@@ -99,19 +99,23 @@ body {
             padding: 0;
             border-right: solid 3px black;
 
-            * {
-                padding: 1rem;
-            }
-
-            h3 {
-                margin: 0;
-            }
-            p {
-                margin: 0;
-                padding-top: 0rem;
+            section {
                 border-bottom: solid 3px black;
+
+                * {
+                    padding: 1rem;
+                }
+    
+                h3 {
+                    margin: 0;
+                }
+                p {
+                    margin: 0;
+                    padding-top: 0rem;
+                    
+                }
             }
-            p:last-child {
+            section:last-child {
                 border-bottom: 0;
             }
         }
@@ -126,7 +130,7 @@ body {
                 background-color: $HIGHLIGHT;
                 color: $BASE;
                 height: 20rem;
-                margin-bottom: 4rem;
+                margin-bottom: 10rem;
                 justify-content: space-evenly;
 
                 div {
@@ -208,11 +212,30 @@ body {
                 }
             }
         }
-        #grid-foot {
+        #grid-foot-container {
+            display: flex;
             grid-area: "foot";
             grid-column: span 2;
             background-color: $HIGHLIGHT;
             color: $BASE;
+            justify-content: center;
+        }
+        #grid-foot {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+
+            p {
+                padding: 0;
+                margin-bottom: 2rem;
+            }
+            p:first-child {
+                color: rgba($color: $BASE, $alpha: 0.5);
+            }
+            p:last-child {
+
+            }
         }
     }
     

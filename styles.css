@@ -71,18 +71,20 @@ body {
   padding: 0;
   border-right: solid 3px black;
 }
-.main-container .main #grid-text * {
-  padding: 1rem;
-}
-.main-container .main #grid-text h3 {
-  margin: 0;
-}
-.main-container .main #grid-text p {
-  margin: 0;
-  padding-top: 0rem;
+.main-container .main #grid-text section {
   border-bottom: solid 3px black;
 }
-.main-container .main #grid-text p:last-child {
+.main-container .main #grid-text section * {
+  padding: 1rem;
+}
+.main-container .main #grid-text section h3 {
+  margin: 0;
+}
+.main-container .main #grid-text section p {
+  margin: 0;
+  padding-top: 0rem;
+}
+.main-container .main #grid-text section:last-child {
   border-bottom: 0;
 }
 .main-container .main #grid-scale {
@@ -96,7 +98,7 @@ body {
   background-color: black;
   color: white;
   height: 20rem;
-  margin-bottom: 4rem;
+  margin-bottom: 10rem;
   justify-content: space-evenly;
 }
 .main-container .main #grid-scale section div h3 {
@@ -431,13 +433,27 @@ body {
   height: 100%;
   border-left: 0.5rem solid #ff0a00;
 }
-.main-container .main #grid-foot {
+.main-container .main #grid-foot-container {
+  display: flex;
   grid-area: "foot";
   grid-column: span 2;
   background-color: black;
   color: white;
+  justify-content: center;
 }
-
+.main-container .main #grid-foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+.main-container .main #grid-foot p {
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.main-container .main #grid-foot p:first-child {
+  color: rgba(255, 255, 255, 0.5);
+}
 .foot {
   display: flex;
   position: relative;
