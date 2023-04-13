@@ -1,3 +1,7 @@
+html, body {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f1d145;
   margin: 0;
@@ -11,6 +15,11 @@ body {
 .standard-link:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+header {
+  position: fixed;
+  width: 100%;
 }
 
 .head {
@@ -42,6 +51,8 @@ body {
   background: linear-gradient(#ffffff 0%, #f1d145 5% 88%, #502e2e 100%);
   border-top: 0;
   border-bottom: 0;
+  margin-top: 0;
+  height: auto;
 }
 .main-container .main {
   display: grid;
@@ -454,12 +465,41 @@ body {
 .main-container .main #grid-foot p:first-child {
   color: rgba(255, 255, 255, 0.5);
 }
+#scrolltotop-btn {
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  z-index: 2;
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  background-color: white;
+  color: black;
+  transition: opacity 400ms;
+  opacity: 1;
+}
+#scrolltotop-btn:hover {
+  cursor: pointer;
+  filter: brightness(0.7);
+}
+#scrolltotop-btn:active {
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.on-top {
+  display: none;
+  opacity: 0;
+}
+
 .foot {
   display: flex;
   position: relative;
   bottom: 0;
   padding: 0.5rem;
   justify-content: space-between;
+  align-items: center;
+  height: 2rem;
 }
 .foot div {
   margin: 0 0.5rem;
