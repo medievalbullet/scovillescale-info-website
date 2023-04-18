@@ -4,60 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Scoville Info</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <div class="content">
         <header id="header">
-            <sectoin class="head outline">
+            <section class="head outline">
                 <img id="head-logo" src="/media/chilli logomain-icon.svg" alt="ICO">
                 <h3 id="head-title">Scoville Info</h3>
                 <nav>
-                    <span class="standard-link">History</span>
-                    <span class="standard-link">How it's messured</span>
-                    <span class="standard-link">Presence in our world</span>
+                    <span class="standard-link sections-dropdown-group" id="nav-sections">Sections</span>
+                    <span class="standard-link peppers-dropdown-group" id="nav-peppers">Peppers</span>
                 </nav>
             </section>
+            <div class="sections-dropdown-group dropdown-groups" id="sections-dropdown">
+                <a href="#text-history">History of the Scoville Scale</a>
+                <a href="#text-mesure">How the Scoville Scale is Measured</a>
+                <a href="#text-foods">Common Foods and Peppers on the Scoville Scale</a>
+                <a href="#text-benefits">Health Benefits of Spicy Foods</a>
+                <a href="#text-business">Business and the Scoville Scale</a>
+                <a href="#text-future">The Future of the Scoville Scale</a>
+            </div>
+            <div class="peppers-dropdown-group dropdown-groups" id="peppers-dropdown">
+                <a href="#scale-1">Bell Pepper</a>
+                <a href="#scale-1">Pimento Pepper</a>
+                <a href="#scale-2">Anaheim Pepper</a>
+                <a href="#scale-2">Jalapeno Pepper</a>
+                <a href="#scale-3">Serrano Pepper</a>
+                <a href="#scale-3">Cayenne Pepper</a>
+                <a href="#scale-4">Thai Pepper</a>
+                <a href="#scale-4">Habanero Pepper</a>
+                <a href="#scale-5">Ghost Pepper</a>
+                <a href="#scale-5">Infinity Pepper</a>
+                <a href="#scale-6">Trinidad Moruga Scorpion Pepper</a>
+                <a href="#scale-6">Carolina Reaper</a>
+                <a href="#scale-7">Dragon's Breath Pepper</a>
+                <a href="#scale-7">Pepper X</a>
+            </div>
         </header>
+        <div id="dropdown-bg"></div>
         <div class="main-container outline">
             <section class="main outline">
                 <h1 class="outline" id="grid-title">Scoville Scale</h1>
                 <div id="grid-text">
-                    <section>
+                    <section id="text-history">
                         <h3>History of the Scoville Scale</h3>
                         <p>The Scoville Scale was invented by Wilbur Scoville in 1912 as a way to measure the heat of chili peppers. Scoville, a pharmacist, developed a test in which he diluted a pepper's extract until the heat was no longer detectable by a panel of tasters. The number of dilutions it took to reach this point was used to determine the pepper's rating in Scoville Heat Units (SHUs).</p>
                         <p>While the test has since been refined, the Scoville Scale remains the most widely used method for measuring chili pepper heat.</p>    
                     </section>
-                    <section>
+                    <section id="text-understand">
                         <h3>Understanding the Scoville Scale</h3>
                         <p>The Scoville Scale is a measurement of the heat or spiciness of chili peppers and other spicy foods. It's based on the concentration of capsaicin, the chemical compound responsible for the burning sensation associated with spicy foods.</p>
                         <p>The Scoville Scale assigns a numerical value to each pepper, ranging from 0 (no heat) to millions of SHUs (extremely hot). The higher the SHU rating, the hotter the pepper.</p>
                         <p>The Scoville Scale is used by chefs, food manufacturers, and chili enthusiasts to determine the heat level of different peppers and to create recipes with the desired level of spiciness.</p>    
                     </section>
-                    <section>
+                    <section id="text-mesure">
                         <h3>How the Scoville Scale is Measured</h3>
                         <p>The Scoville Scale is measured by diluting a chili pepper's extract in sugar water until it's no longer detectable to a panel of tasters. The number of dilutions required to reach this point determines the pepper's rating in Scoville Heat Units (SHUs).</p>
                         <p>While this method is still used, it has been replaced by high-performance liquid chromatography (HPLC), which directly measures the amount of capsaicin in a sample. The results are then converted to SHUs. HPLC is faster and more accurate than the Scoville test, and it can measure the heat of non-pepper foods as well.</p>    
                     </section>
-                    <section>
+                    <section id="text-foods">
                         <h3>Common Foods and Peppers on the Scoville Scale</h3>
                         <p>There are many common foods and peppers on the Scoville Scale, ranging from mild to extremely hot. Bell peppers have a Scoville rating of zero, while jalapeno peppers range from 2,500 to 8,000 SHUs. Habanero peppers can range from 100,000 to 350,000 SHUs, and the infamous Carolina Reaper can have a rating of up to 2.2 million SHUs.</p>
                         <p>Other foods and sauces, such as hot sauces and curry, also have varying levels of heat, and can be found at different points on the Scoville Scale.</p>
                     </section>
-                    <section>
+                    <section id="text-benefits">
                         <h3>Health Benefits of Spicy Foods</h3>
                         <p>Spicy foods have been shown to have numerous health benefits. Capsaicin, the active ingredient in chili peppers, has been linked to reduced inflammation, improved digestion, and pain relief. Some studies have also suggested that capsaicin may have a positive effect on weight loss, heart health, and even cancer prevention.</p>
                         <p>While further research is needed to confirm these benefits, incorporating spicy foods into your diet in moderation can be a tasty and potentially beneficial choice.</p>
                     </section>
-                    <section>
+                    <section id="text-business">
                         <h3>Business and the Scoville Scale</h3>
                         <p>The Scoville Scale is widely used in the food industry, with many products featuring their SHU rating on their packaging. Hot sauces, snacks, and even beer are marketed based on their heat level.</p>
                         <p>Some companies hold contests to create the hottest sauce or snack, which has led to a "heat arms race" among manufacturers.</p>
                         <p>The Scoville Scale has also been used in product development, with companies creating new varieties of spicy foods and sauces to meet the growing demand for heat.</p>                            
                     </section>
-                    <section>
+                    <section id="text-future">
                         <h3>The Future of the Scoville Scale</h3>
                         <p>As technology continues to advance, the future of the Scoville Scale is likely to evolve. New methods for measuring capsaicin levels are being developed, including spectroscopy and mass spectrometry. These methods offer the potential for even greater accuracy and precision in measuring pepper heat.</p>
                         <p>Additionally, genetic engineering may allow for the creation of new varieties of peppers with unique levels of heat and flavor.</p>
@@ -179,7 +203,7 @@
                 </div>
             </section>    
         </div>
-        <button id="scrolltotop-btn">Scroll to top</button>
+        <button class="on-top" id="scrolltotop-btn">Scroll to top</button>
         <footer>
             <div class="foot outline">
                 <div class="foot-left">
