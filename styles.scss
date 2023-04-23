@@ -2,6 +2,11 @@
 $BG: #f1d145;
 $BASE: white;
 $HIGHLIGHT: black;
+$HEADER-SIZE: 5rem;
+
+:export {
+    HEADER-SIZE: $HEADER-SIZE;
+}
 
 $ACCENTS: (
     "1": #03ff00,
@@ -67,16 +72,18 @@ a {
 
     #head-title {
         font-weight: bold;
-        margin: 0 4rem 0 0;
+        margin: 0 2.5rem 0 0;
         font-size: 1.7rem;
     }
     nav {
-        display: inline-block;
-    }
-    nav * {
-        padding: 1rem 2rem 3rem 2rem;
-        margin-right: 0rem;
-        font-weight: bold;
+        display: flex;
+        flex-wrap: wrap;
+
+        * {
+            padding: 1rem;
+            margin-right: 0rem;
+            font-weight: bold;
+        }
     }
 }
 
@@ -85,23 +92,20 @@ a {
     //display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    overflow: scroll;
     background-color: $HIGHLIGHT;
     color: $BASE;
     padding: 1rem 5rem;
-    max-height: 25rem;
+    max-height: 35rem;
 
     * {
         width: 15rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    *:first-child {
-        //margin-top: 0rem;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
     }
 
     *:last-child {
-        margin-bottom: 0rem;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -123,7 +127,7 @@ a {
     display: flex;
     justify-content: center;
     background-color: $BG;
-    background: linear-gradient(#ffffff 0%,$BG 5% 88%,#502e2e 100%);
+    background: linear-gradient(#ffffff 1%,$BG 10% 88%,#502e2e 100%);
     border-top: 0;
     border-bottom: 0;
     margin-top: 0;
@@ -135,7 +139,8 @@ a {
         height: auto;
         border-top: 0;
         border-bottom: 0;
-        grid-template: 4rem 1fr 20rem / 1fr 1fr;
+        grid-template-rows: 4rem 1fr 20rem;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: 
             "title title"
             "text scale"
@@ -145,7 +150,7 @@ a {
             padding: 1rem;
         }
         
-        #grid-title {
+        .grid-title {
             display: flex;
             grid-area: "title";
             grid-column: span 2;
@@ -157,14 +162,14 @@ a {
             margin: 0;
             
         }
-        #grid-text {
+        .grid-text {
             grid-area: "text";
             padding: 0;
             border-right: solid 3px black;
 
             section {
                 border-bottom: solid 3px black;
-                scroll-margin-top: 5rem;
+                scroll-margin-top: $HEADER-SIZE;
 
                 * {
                     padding: 1rem;
@@ -183,7 +188,7 @@ a {
                 border-bottom: 0;
             }
         }
-        #grid-scale {
+        .grid-scale {
             grid-area: "scale";
             padding: 0;
             background: linear-gradient(#16180e, #180e0e);
@@ -196,7 +201,7 @@ a {
                 height: 20rem;
                 margin-bottom: 10rem;
                 justify-content: space-evenly;
-                scroll-margin-top: 5rem;
+                scroll-margin-top: $HEADER-SIZE;
 
                 div {
 
@@ -277,7 +282,7 @@ a {
                 }
             }
         }
-        #grid-foot-container {
+        .grid-foot-container {
             display: flex;
             grid-area: "foot";
             grid-column: span 2;
@@ -285,7 +290,7 @@ a {
             color: $BASE;
             justify-content: center;
         }
-        #grid-foot {
+        .grid-foot {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -306,7 +311,33 @@ a {
     
 }
 
+@media (max-width: 650px) {
 
+    .main {
+        display: flex !important;
+        flex-direction: column;
+        border: 0;
+        
+        /*
+        background-color: rebeccapurple;
+        display: grid;
+        grid-template-rows: 4rem 1fr 20rem;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "title"
+            "text"
+            "scale"
+            "foot";
+        
+            .grid-title {
+                grid-column: span 1;
+            }
+            .grid-foot-container {
+                grid-column: span 1;
+            }
+        */
+    }
+}
 
 #scrolltotop-btn {
     position: fixed;
@@ -345,7 +376,7 @@ a {
     padding: 0.5rem;
     justify-content: space-between;
     align-items: center;
-    height: 2rem;
+    height: fit-content;
 
     div {
         margin: 0 0.5rem;
