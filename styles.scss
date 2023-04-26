@@ -221,7 +221,7 @@ a {
             @for $i from 1 through 7 {
                 section:nth-child(#{$i}) {
                     display: grid;
-                    grid-template: 1fr 1fr / 1fr 8rem 0rem;
+                    grid-template: 1fr 1fr / 1fr 8rem 0.1rem;
                     grid-template-areas: 
                         "scale-title1 scale-img1 scale-bar"
                         "scale-title2 scale-img2 scale-bar"
@@ -309,6 +309,60 @@ a {
         }
     }
     
+}
+
+.anim-slidein-right {
+    animation-name: slidein-right;
+    animation-duration: 400ms;
+}
+
+@keyframes slidein-right {
+    0% {
+        transform: translateX(10rem);
+        opacity: 0.1;
+        filter: blur(3px);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+}
+
+.anim-slidein-left {
+    animation-name: slidein-left;
+    animation-duration: 400ms;
+}
+
+@keyframes slidein-left {
+    0% {
+        transform: translateX(-10rem);
+        opacity: 0.1;
+        filter: blur(3px);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+}
+
+.anim-slidein-bottom {
+    animation-name: slidein-bottom;
+    animation-duration: 400ms;
+}
+
+@keyframes slidein-bottom {
+    0% {
+        transform: translateY(-10rem);
+        opacity: 0.1;
+        filter: blur(3px);
+    }
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+@media(prefers-reduced-motion) {
+    .anim-slidein-bottom, .anim-slidein-left, .anim-slidein-right {
+        animation-duration: 0ms;
+    }
 }
 
 @media (max-width: 650px) {

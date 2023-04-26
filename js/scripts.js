@@ -61,9 +61,41 @@ function drowpdownGroupAction(group, mainElement) {
 }
 
 // Change main content top margin dynamically
-window.addEventListener('resize', () => {
+function adoptHeaderSize() {
     let headerHeight = header.offsetHeight
     console.log("Header height: "+headerHeight)
     main.style.marginTop = String(headerHeight)+"px"
+}
+
+window.addEventListener('resize', () => {
+    adoptHeaderSize()
 });
+window.onload = adoptHeaderSize()
+
+// Slide in animations
+const slideinButton = document.querySelector("#slidein-button")
+const gridScaleElements = document.querySelectorAll(".grid-scale *")
+const gridTextElements = document.querySelectorAll(".grid-text *")
+
+// Slide in animation as you scroll
+function slideinScrollAction(elementsGroup, animationName) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(animationName)
+            } //else {
+              //  entry.target.classList.remove(animationName)
+            //}
+        })
+    })
+    
+    elementsGroup.forEach((el) => observer.observe(el))
+}
+
+const gridFootElements = document.querySelectorAll(".grid-foot *")
+
+slideinScrollAction(gridTextElements, "anim-slidein-left")
+slideinScrollAction(gridScaleElements, "anim-slidein-right")
+slideinScrollAction(gridFootElements, "anim-slidein-bottom")
+
 
